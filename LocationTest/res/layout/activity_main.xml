@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经度" />
+
+        <EditText
+            android:id="@+id/jingDu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="numberDecimal"
+            android:text="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纬度" />
+
+        <EditText
+            android:id="@+id/weiDu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="numberDecimal"
+            android:text="32" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取距离" />
+
+    <TextView
+        android:id="@+id/juLi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="将显示输入位置与最后获取的位置之间的距离" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/getA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取位置A" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A经度" />
+
+            <TextView
+                android:id="@+id/jinDuA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="numberDecimal"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A纬度" />
+
+            <TextView
+                android:id="@+id/weiDuA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="numberDecimal"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/getB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取位置B" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B经度" />
+
+            <TextView
+                android:id="@+id/jinDuB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="numberDecimal"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B纬度" />
+
+            <TextView
+                android:id="@+id/weiDuB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="numberDecimal"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getABDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取AB间距离" />
+
+    <TextView
+        android:id="@+id/juLiAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="将显示AB之间的距离" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/getLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="启动定位" />
+
+        <Button
+            android:id="@+id/stopLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止定位" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位信息" />
+    </ScrollView>
+
+</LinearLayout>
